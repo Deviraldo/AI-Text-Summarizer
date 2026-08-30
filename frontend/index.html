@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Text Summarizer</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Header -->
+
+        <section class="header">
+
+            <h1>AI Text Summarizer</h1>
+
+            <p>
+                Summarize long text instantly using AI.
+            </p>
+
+        </section>
+
+
+        <!-- Main Card -->
+
+        <section class="card">
+
+            <!-- Input -->
+
+            <div class="input-section">
+
+                <div class="section-header">
+
+                    <h2>Enter Your Text</h2>
+
+                    <span id="characterCount">
+                        0 / 20,000
+                    </span>
+
+                </div>
+
+                <textarea
+                    id="textInput"
+                    placeholder="Paste or type your text here..."
+                    maxlength="20000"
+                ></textarea>
+
+            </div>
+
+
+            <!-- Button -->
+
+            <button
+                id="summarizeButton"
+                onclick="summarizeText()"
+            >
+                Summarize Text
+            </button>
+
+
+            <!-- Loading -->
+
+            <div
+                id="loading"
+                class="loading hidden"
+            >
+                <div class="spinner"></div>
+
+                <p>
+                    Generating summary...
+                </p>
+            </div>
+
+
+            <!-- Error -->
+
+            <div
+                id="errorMessage"
+                class="error hidden"
+            ></div>
+
+
+            <!-- Output -->
+
+            <div
+                id="resultSection"
+                class="result-section hidden"
+            >
+
+                <div class="section-header">
+
+                    <h2>Summary</h2>
+
+                    <button
+                        id="copyButton"
+                        onclick="copySummary()"
+                        class="copy-button"
+                    >
+                        Copy
+                    </button>
+
+                </div>
+
+                <div
+                    id="summaryOutput"
+                    class="summary-output"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
